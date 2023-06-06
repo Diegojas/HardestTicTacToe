@@ -18,7 +18,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "deploy": "aws --profile ccx s3 sync build/ s3://rectjsdemo",
+    "prod": "npm run build && npm run deploy"
   },
   "eslintConfig": {
     "extends": [
